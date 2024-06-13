@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Guardian API",
-    "description": "API documentation for Guardian services.",
+    "description": "API documentation for Guardian.",
     "version": "1.0.0"
   },
   "servers": [

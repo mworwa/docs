@@ -25,12 +25,6 @@
     "name": "Dashboard",
     "url": "https://gardianai.com"
   },
-  "tabs": [
-    {
-      "name": "API Referencee",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Documentation",

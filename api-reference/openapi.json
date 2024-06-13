@@ -11,8 +11,9 @@
     }
   ],
   "paths": {
-    "/agents/{agentId}": {
+    "/agents/{agentId}/analyze/text": {
       "post": {
+        "tags": ["Analyze"],
         "summary": "Send content to an agent",
         "description": "Send content to a specified agent using their agent ID.",
         "parameters": [

@@ -70,7 +70,7 @@
                       "example": "negative"
                     },
                     "score": {
-                      "type": "float",
+                      "type": "number",
                       "example": 0.98
                     },
                     "label_scores": {

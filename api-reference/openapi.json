@@ -68,8 +68,8 @@
                       "example": "negative"
                     },
                     "score": {
-                      "type": "integer",
-                      "example": 1
+                      "type": "float",
+                      "example": 0.98
                     },
                     "label_scores": {
                       "type": "object",
@@ -79,7 +79,7 @@
                       "example": {
                         "positive": 0,
                         "neutral": 0,
-                        "negative": 1
+                        "negative": 0.98
                       }
                     }
                   }

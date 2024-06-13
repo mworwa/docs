@@ -36,7 +36,6 @@
                 "properties": {
                   "content": {
                     "type": "string",
-                    "required": true,
                     "example": "I don't like your products",
                     "maxLength": 1000,
                     "description": "The text you'd like to analyze. Limit 1000 characters"

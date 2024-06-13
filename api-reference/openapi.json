@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.3",
   "info": {
     "title": "Guardian API",
     "description": "API documentation for Guardian.",
@@ -33,12 +33,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "description": "The text you'd like to analyze. Limit 1000 characters",
                 "properties": {
                   "content": {
                     "type": "string",
                     "example": "I don't like your products",
-                    "maxLength": 1000
+                    "maxLength": 1000,
+                    "description": "The text you'd like to analyze. Limit 1000 characters",
                   }
                 }
               }

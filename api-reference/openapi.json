@@ -36,7 +36,8 @@
                 "properties": {
                   "content": {
                     "type": "string",
-                    "example": "I don't like your products"
+                    "example": "I don't like your products",
+                    "maxLength": 1000
                   }
                 }
               }

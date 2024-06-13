@@ -13,7 +13,7 @@
   "paths": {
     "/agents/{agentId}/analyze/text": {
       "post": {
-        "tags": ["Agent Analysis"],
+        "tags": ["Analyze"],
         "summary": "Send content to an agent",
         "description": "Send content to a specified agent using their agent ID.",
         "parameters": [
@@ -73,19 +73,25 @@
                     },
                     "label_scores": {
                       "type": "object",
-                      "additionalProperties": {
-                        "type": "number"
-                      },
-                      "example": {
-                        "positive": 0,
-                        "neutral": 0,
-                        "negative": 1
+                      "properties": {
+                        "positive": {
+                          "type": "integer",
+                          "example": 0
+                        },
+                        "neutral": {
+                          "type": "integer",
+                          "example": 0
+                        },
+                        "negative": {
+                          "type": "integer",
+                          "example": 1
+                        }
                       }
                     }
                   }
                 }
               }
-            }
+            }a
           }
         },
         "security": [

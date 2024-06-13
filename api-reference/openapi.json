@@ -13,8 +13,8 @@
   "paths": {
     "/agents/{agentId}": {
       "post": {
-        "summary": "Send feedback to an agent",
-        "description": "Send feedback content to a specified agent using their agent ID.",
+        "summary": "Send content to an agent",
+        "description": "Send content to a specified agent using their agent ID.",
         "parameters": [
           {
             "in": "path",

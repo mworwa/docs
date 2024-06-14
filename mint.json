@@ -47,12 +47,6 @@
         "account/queries"
       ]
     },
-     {
-      "group": "Agents",
-      "pages": [
-        "agents/create-agent"
-      ]
-    },
     {
       "group": "API Documentation",
       "pages": [

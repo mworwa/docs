@@ -78,7 +78,7 @@
                     "score": {
                       "type": "number",
                       "example": 0.98,
-                       "description": "The label’s score, ranging from 0 to 1, with 1 indicating a high probability of being correct."
+                       "description": "The label score, ranging from 0 to 1, with 1 indicating a high probability of being correct."
                     },
                     "label_scores": {
                       "type": "object",

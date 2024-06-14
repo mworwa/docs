@@ -38,7 +38,7 @@
                     "type": "string",
                     "example": "I don't like your products",
                     "maxLength": 1000,
-                    "description": "The text you'd like to analyze. Limit 1000 characters"
+                    "description": "The text you'd like to analyze. Limit 1000 characters."
                   }
                 }
               }
@@ -56,18 +56,18 @@
                     "agent_id": {
                       "type": "string",
                       "example": "66683c760ea17e1c58a16649",
-                      "description": "ID of the agent that performs the analysis"
+                      "description": "ID of the agent that performs the analysis."
 
                     },
                     "agent_name": {
                       "type": "string",
                       "example": "Sentiment",
-                      "description": "Name of the agent that performs the analysis"
+                      "description": "Name of the agent that performs the analysis."
                     },
                     "content": {
                       "type": "string",
                       "example": "I don't like your products",
-                      "description": "Content sent for analysis"
+                      "description": "Content sent for analysis."
 
                     },
                     "label": {
@@ -85,6 +85,7 @@
                       "additionalProperties": {
                         "type": "number"
                       },
+                      "description": "An object that includes the scores for all labels.",
                       "example": {
                         "positive": 0,
                         "neutral": 0,

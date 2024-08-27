@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://gardian-kappa.vercel.app/api"
+      "url": "https://gardianai.com/api/v1"
     }
   ],
   "paths": {
@@ -38,7 +38,7 @@
                     "type": "string",
                     "example": "I don't like your products",
                     "maxLength": 1000,
-                    "description": "The text you'd like to analyze. Limit 1000 characters"
+                    "description": "The text you'd like to analyze. Limit 1000 characters."
                   }
                 }
               }
@@ -55,29 +55,37 @@
                   "properties": {
                     "agent_id": {
                       "type": "string",
-                      "example": "66683c760ea17e1c58a16649"
+                      "example": "66683c760ea17e1c58a16649",
+                      "description": "ID of the agent that performs the analysis."
+
                     },
                     "agent_name": {
                       "type": "string",
-                      "example": "Sentiment"
+                      "example": "Sentiment",
+                      "description": "Name of the agent that performs the analysis."
                     },
                     "content": {
                       "type": "string",
-                      "example": "I don't like your products"
+                      "example": "I don't like your products",
+                      "description": "Content sent for analysis."
+
                     },
                     "label": {
                       "type": "string",
-                      "example": "negative"
+                      "example": "negative",
+                      "description": "The label with the highest probability. This will always be the label with the highest score."
                     },
                     "score": {
                       "type": "number",
-                      "example": 0.98
+                      "example": 0.98,
+                       "description": "The label score, ranging from 0 to 1, with 1 indicating a high probability of being correct."
                     },
                     "label_scores": {
                       "type": "object",
                       "additionalProperties": {
                         "type": "number"
                       },
+                      "description": "An object that includes the scores for all labels.",
                       "example": {
                         "positive": 0,
                         "neutral": 0,

@@ -14,7 +14,7 @@
     "/agents/{agentId}/analyze/text": {
       "post": {
         "tags": ["Analyze"],
-        "summary": "Send content to an agent",
+        "summary": "Send text content to an agent",
         "description": "Send content to a specified agent using their agent ID.",
         "parameters": [
           {
@@ -82,6 +82,98 @@
                         "positive": 0,
                         "neutral": 0,
                         "negative": 0.98
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/agents/{agentId}/analyze/image": {
+      "post": {
+        "tags": ["Analyze"],
+        "summary": "Send image to an agent",
+        "description": "Send image to a specified agent using their agent ID.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "agentId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The ID of the agent to send feedback to."
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "imageUrl": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string",
+                    "example": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tabby_cat_with_visible_nictitating_membrane.jpg/800px-Tabby_cat_with_visible_nictitating_membrane.jpg",
+                    "description": "Url of the image you'd like to analyze"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "agent_id": {
+                      "type": "string",
+                      "example": "66683c760ea17e1c58a16649"
+                    },
+                    "agent_name": {
+                      "type": "string",
+                      "example": "Image NSFW"
+                    },
+                    "image_url": {
+                      "type": "string",
+                      "example": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tabby_cat_with_visible_nictitating_membrane.jpg/800px-Tabby_cat_with_visible_nictitating_membrane.jpg"
+                    },
+                    "label": {
+                      "type": "string",
+                      "example": "neutral"
+                    },
+                    "score": {
+                      "type": "neutral",
+                      "example": 1
+                    },
+                    "label_scores": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "number"
+                      },
+                      "example": {
+                        "gore": 0,
+                        "nudity": 0,
+                        "suggestive": 0,
+                        "alcohol": 0,
+                        "violence": 0,
+                        "hate": 0,
+                        "smoking": 0,
+                        "drugs": 0,
+                        "weapon": 0,
+                        "neutral": 1
                       }
                     }
                   }

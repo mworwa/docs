@@ -13,7 +13,9 @@
   "paths": {
     "/agents/{agentId}/analyze/text": {
       "post": {
-        "tags": ["Analyze"],
+        "tags": [
+          "Analyze"
+        ],
         "summary": "Send text content to an agent",
         "description": "Send content to a specified agent using their agent ID.",
         "parameters": [
@@ -57,7 +59,6 @@
                       "type": "string",
                       "example": "66683c760ea17e1c58a16649",
                       "description": "ID of the agent that performs the analysis."
-
                     },
                     "agent_name": {
                       "type": "string",
@@ -68,7 +69,6 @@
                       "type": "string",
                       "example": "I don't like your products",
                       "description": "Content sent for analysis."
-
                     },
                     "label": {
                       "type": "string",
@@ -78,7 +78,7 @@
                     "score": {
                       "type": "number",
                       "example": 0.98,
-                       "description": "The label score, ranging from 0 to 1, with 1 indicating a high probability of being correct."
+                      "description": "The label score, ranging from 0 to 1, with 1 indicating a high probability of being correct."
                     },
                     "label_scores": {
                       "type": "object",
@@ -107,7 +107,9 @@
     },
     "/agents/{agentId}/analyze/image": {
       "post": {
-        "tags": ["Analyze"],
+        "tags": [
+          "Analyze"
+        ],
         "summary": "Send image to an agent",
         "description": "Send image to a specified agent using their agent ID.",
         "parameters": [
@@ -123,7 +125,7 @@
         ],
         "requestBody": {
           "required": true,
-          "imageUrl": {
+          "content": {
             "application/json": {
               "schema": {
                 "type": "object",
@@ -163,7 +165,7 @@
                       "example": "neutral"
                     },
                     "score": {
-                      "type": "neutral",
+                      "type": "number",
                       "example": 1
                     },
                     "label_scores": {

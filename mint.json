@@ -56,7 +56,8 @@
     {
       "group": "Endpoints",
       "pages": [
-        "api-reference/endpoint/create"
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/analyze-image"
       ]
     }
   ],

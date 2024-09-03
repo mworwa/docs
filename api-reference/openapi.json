@@ -130,7 +130,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "content": {
+                  "image_url": {
                     "type": "string",
                     "example": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tabby_cat_with_visible_nictitating_membrane.jpg/800px-Tabby_cat_with_visible_nictitating_membrane.jpg",
                     "description": "Url of the image you'd like to analyze"
